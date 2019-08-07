@@ -1,0 +1,18 @@
+{
+    "name": "rachid/blogphp",
+    "require": {
+        
+        "twig/twig": "^2.0",
+        "monolog/monolog": "^1.24",
+        "kint-php/kint": "^3.2"
+    },
+    "autoload": {
+        "psr-4":{
+            "App\\":"src/"
+        }
+    },
+    "scripts": {
+        "start":"php -S localhost:5000  -t=public"
+        
+    }
+}
