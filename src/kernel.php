@@ -22,8 +22,8 @@ class Kernel{
         $this->logger->info('Arrancamos el servidor');
         $httpMethod = $_SERVER['REQUEST_METHOD'];
         $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-        $routerManager=new RouterManager();
-        $routerManager->dispatch($httpMethod, $uri, Web::getDispatcher());
+        $routeManager = $this->container->get(RouterManager::class);
+        $routeManager->dispatch($httpMethod, $uri, Web::getDispatcher());
     }
     public function createContainer():Container{
         $containerBuilder = new ContainerBuilder();

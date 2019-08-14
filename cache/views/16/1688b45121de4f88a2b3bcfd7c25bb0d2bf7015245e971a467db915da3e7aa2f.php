@@ -12,8 +12,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* index.twig.html */
-class __TwigTemplate_9aa30275a706e1f52599aca39deeeaf4545a3a473a53da11c7a2609fced15779 extends \Twig\Template
+/* usersView.twig.html */
+class __TwigTemplate_28b85a56be1945e59774dd7d93e75ea718b87e5bed60bb04e496fdec4b283fbd extends \Twig\Template
 {
     private $source;
     private $macros = [];
@@ -38,22 +38,22 @@ class __TwigTemplate_9aa30275a706e1f52599aca39deeeaf4545a3a473a53da11c7a2609fced
     protected function doDisplay(array $context, array $blocks = [])
     {
         $macros = $this->macros;
-        $this->parent = $this->loadTemplate("template.twig.html", "index.twig.html", 1);
+        $this->parent = $this->loadTemplate("template.twig.html", "usersView.twig.html", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
-    // line 2
+    // line 3
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 3
-        echo "    <h1> HOLA Mundo</h1>
+        // line 4
+        echo "    <h1>Users</h1>
 ";
     }
 
     public function getTemplateName()
     {
-        return "index.twig.html";
+        return "usersView.twig.html";
     }
 
     public function isTraitable()
@@ -63,11 +63,11 @@ class __TwigTemplate_9aa30275a706e1f52599aca39deeeaf4545a3a473a53da11c7a2609fced
 
     public function getDebugInfo()
     {
-        return array (  50 => 3,  46 => 2,  35 => 1,);
+        return array (  50 => 4,  46 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("", "index.twig.html", "C:\\Users\\rachid\\Desktop\\Cursos GEEKHUBS\\blogphp\\templates\\index.twig.html");
+        return new Source("", "usersView.twig.html", "C:\\Users\\rachid\\Desktop\\Cursos GEEKHUBS\\blogphp\\templates\\usersView.twig.html");
     }
 }
