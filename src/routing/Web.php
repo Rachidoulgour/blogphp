@@ -9,6 +9,7 @@ class Web{
             function  (\FastRoute\RouteCollector $route){
                 $route->addRoute('GET','/', ['App\controllers\HomeController','index']);
                 $route->addRoute('GET','/quien-somos',['App\controllers\WhoController','index']);
+                $route->addRoute('GET','/users',['App\controllers\UsersController','index']);
             }
         );
     }
