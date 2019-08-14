@@ -1,10 +1,10 @@
 <?php
 namespace App\controllers;
-use App\ViewManager;
+// use App\ViewManager;
 
-class WhoController{
+class WhoController extends Controller{
     public function index(){
-        $viewManager = new ViewManager();
-        $viewManager->renderTemplate("Who.twig.html");
+        // $viewManager = new ViewManager();
+        $this->viewManager->renderTemplate("Who.twig.html");
     }
 }
