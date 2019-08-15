@@ -58,7 +58,20 @@ class __TwigTemplate_3f93b3338bda530b79be449079128238fd842ec39e3c7af091021d17ae1
                 <input type=\"password\" class=\"form-control\" name=\"password\" placehoder=\"Password\" required=\"\" />
                 <button class=\"btn btn-lg btn-primary btn-block\" name=\"submit\" value=\"Login\" type=\"Submit\">Login</button>
             </form>
-       </div>
+            ";
+        // line 15
+        if (($context["error"] ?? null)) {
+            // line 16
+            echo "                <div class=\"alert alert-danger\" role=\"alert\">
+                    ";
+            // line 17
+            echo twig_escape_filter($this->env, ($context["error"] ?? null), "html", null, true);
+            echo "
+                </div>
+            ";
+        }
+        // line 20
+        echo "       </div>
     </div>
 
 
@@ -77,7 +90,7 @@ class __TwigTemplate_3f93b3338bda530b79be449079128238fd842ec39e3c7af091021d17ae1
 
     public function getDebugInfo()
     {
-        return array (  50 => 4,  46 => 3,  35 => 1,);
+        return array (  74 => 20,  68 => 17,  65 => 16,  63 => 15,  50 => 4,  46 => 3,  35 => 1,);
     }
 
     public function getSourceContext()

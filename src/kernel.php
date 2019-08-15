@@ -6,7 +6,9 @@ use \DI\ContainerBuilder;
 class Kernel{
     private $container;
     private $logger;
-    public function __construct(){
+    private static $instance = NULL;
+    private function __construct(){
+        session_start();
         // $logManager = new LogManager();
         // $logManager->info("Arrancando Aplicacion");
     //     $viewManager = new ViewManager();
@@ -17,7 +19,15 @@ class Kernel{
         // $routerManager->dispatch($httpMethod, $uri, Web::getDispatcher());
         $this->container=$this->createContainer();
         $this->logger=$this->container->get(LogManager::class);
+        $this->logger->info("Arrancamos el Server");
     }
+    private function __clone(){}
+    public static function getInstance(){
+            if(is_null(self::$instance)){
+                self::$instance = new Kernel();
+            }
+            return self::$instance;
+        }
     public function init(){
         $this->logger->info('Arrancamos el servidor');
         $httpMethod = $_SERVER['REQUEST_METHOD'];

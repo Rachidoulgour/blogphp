@@ -12,6 +12,11 @@
                 <input type="password" class="form-control" name="password" placehoder="Password" required="" />
                 <button class="btn btn-lg btn-primary btn-block" name="submit" value="Login" type="Submit">Login</button>
             </form>
+            {% if error %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endif %}
        </div>
     </div>
 
