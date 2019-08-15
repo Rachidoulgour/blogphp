@@ -16,13 +16,14 @@ class LoginController extends Controller{
         $user=$repository->findByEmail($email);
         if(!$user){
             $this->error= "No existe usuario o Password Incorrecto";
-            $this->viewManager->renderTemplate('login.twig.html',['error'=>$this->error]);
+            return  $this->viewManager->renderTemplate('login.twig.html',['error'=>$this->error]);
         }
         if($user[0]->password !== sha1($password)){
             $this->error= "No existe usuario o Password Incorrecto";
-            $this->viewManager->renderTemplate('login.twig.html',['error'=>$this->error]);
+            return  $this->viewManager->renderTemplate('login.twig.html',['error'=>$this->error]);
         }
-        $this->redirectTo('');
+        $this->sessionManager->put('user', $user);
+        $this->redirectTo('paneldecontrol');
         
     }
 

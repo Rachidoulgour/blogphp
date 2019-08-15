@@ -14,6 +14,7 @@ class Web{
                 $route->addRoute('POST','/register',['App\controllers\auth\RegisterController','register']);
                 $route->addRoute('GET','/login',['App\controllers\auth\LoginController','index']);
                 $route->addRoute('POST','/login',['App\controllers\auth\LoginController','login']);
+                $route->addRoute('GET','/paneldecontrol',['App\controllers\DashBoardController','index']);
             }
         );
     }
