@@ -17,6 +17,8 @@ class HomeController extends Controller{
 
     public function index(){
         // $viewManager= new ViewManager();
-        $this->viewManager->renderTemplate("index.twig.html");
+        // $this->viewManager->renderTemplate("index.twig.html");
+        $post=$this->postService->getPosts();
+        $this->viewManager->renderTemplate("index.twig.html", ['posts'=>$posts]);
     }
 }
