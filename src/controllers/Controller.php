@@ -5,12 +5,13 @@ use App\ViewManager;
 use App\DoctrineManager;
 use App\LogManager;
 use App\SessionManager;
+use App\DI\Container;
 
 abstract class Controller{
     protected $viewManager;
     protected $doctrineManager;
     protected $logManager;
-    public function __construct(ViewManager $viewManager, DoctrineManager $doctrineManager, LogManager $logManager, SessionManager $sessionManager){
+    public function __construct(Container $container, ViewManager $viewManager, DoctrineManager $doctrineManager, LogManager $logManager, SessionManager $sessionManager){
         $this->viewManager = $viewManager;
         $this->doctrineManager = $doctrineManager;
         $this->logManager= $logManager;
