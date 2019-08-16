@@ -3,6 +3,7 @@ namespace App;
 use App\routing\Web;
 use \DI\Container;
 use \DI\ContainerBuilder;
+
 class Kernel{
     private $container;
     private $logger;
@@ -38,6 +39,7 @@ class Kernel{
     public function createContainer():Container{
         $containerBuilder = new ContainerBuilder();
         $containerBuilder->useAutowiring(true);
+        $containerBuilder->useAnnotations(true);
         return $containerBuilder->Build();
     }
 }

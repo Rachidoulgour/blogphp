@@ -4,10 +4,16 @@ use App\ViewManager;
 use App\services\PostService;
 
 class HomeController extends Controller{
+
+    /**
+     * @inject
+     * @var Postservice
+     */
+
     private $postService;
-    public function __invoke(PostService $postservice){
-        $this->postService=$postService;
-    }
+    // public function __invoke(PostService $postservice){
+    //     $this->postService=$postService;
+    // }
 
     public function index(){
         // $viewManager= new ViewManager();
