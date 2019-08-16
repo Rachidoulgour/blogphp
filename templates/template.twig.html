@@ -10,12 +10,26 @@
 <body>
         <header>
                 <ul class="nav justify-content-end">
+                    {% if user is empty %}
                     <li class="nav-item">
                         <a class="nav-link" href="/login">Login</a>
                     </li>
                     <li class="nav-item">
                             <a class="nav-link" href="/register">Registro</a>
                     </li>
+                    {% endif %}
+                    {% if user %}
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-togle="dropdown" aria-expanded="false">
+                            {{user}}
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <a class="dropdown-item" type="button" href="/paneldecontrol">Panel de Control</a>
+                            <a class="dropdown-item" type="button" href="/perfil">Perfil</a>
+                            <a class="dropdown-item" type="button" href="/salir">Salir</a>
+                        </div>
+                    </div>
+                    {% endif %}
                 </ul>
         </header>
     {% block body %}
