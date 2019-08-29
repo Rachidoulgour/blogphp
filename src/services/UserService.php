@@ -15,4 +15,13 @@ class UserService extends Service{
         }
         return null;
     }
+    public function createUser(User $user):User{
+        try{
+            $this->doctrineManager->em->persist($user);
+            $this->doctrineManager->em->fush;
+        }catch(Exception $err){
+            $this->logManager->error($err.toString());
+        }
+        return null;
+    }
 }
