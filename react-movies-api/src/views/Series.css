@@ -1,0 +1,10 @@
+.homeMovies{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+.peliculas{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}

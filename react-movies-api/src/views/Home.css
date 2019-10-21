@@ -1,0 +1,18 @@
+h4{
+    margin: 1rem 1rem 0 1rem;
+    color: orangered;
+}
+.homeMovies{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    margin: 3rem 1rem;
+}
+.peliculas{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    background-color:rgb(248, 210, 139);
+    padding: .5rem;
+    border-radius: .08rem;
+}

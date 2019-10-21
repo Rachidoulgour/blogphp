@@ -1,0 +1,19 @@
+ul{
+    list-style: none;
+    background-color: rgb(245, 175, 45);
+    margin-top: 0;
+    padding: .5rem;
+}
+ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    padding: .5rem;
+    
+}
+ul li a:hover{
+    background-color: rgb(248, 210, 139);
+    transition: .3s ease;
+}
+.active{
+    background-color: rgb(248, 210, 139);
+}
