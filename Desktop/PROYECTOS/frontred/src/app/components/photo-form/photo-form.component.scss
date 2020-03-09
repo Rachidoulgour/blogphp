@@ -1,0 +1,67 @@
+.foto-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(228, 225, 235);
+    padding: 1rem 2rem;
+    .card{
+         margin-top: 2rem;
+    .card-header{
+        margin: 2rem 2rem;
+        font-size: 3rem;
+        color: blueviolet;
+        text-align: center;
+    }
+    .card-body{
+        padding: 2rem;
+        margin: 2rem 2rem;
+        border: solid .05rem #949292;
+        border-radius: .5rem;
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .form-group{
+                margin-top: 1rem;
+                input{
+                    width: 20rem;
+                    padding: .5rem;
+                }
+                textarea{
+                    margin-bottom: 1rem;
+                    width: 30rem;
+                    padding: .5rem;
+                }
+                
+            }
+            .d-none{
+                all: unset;
+                // margin-top: 2rem;
+                margin-bottom: 2rem;
+
+                
+            }
+            .img-fluid{
+                width: 20rem;
+            }
+            button{
+                all: unset;
+                display: block;
+                max-width: 10rem;
+                text-align: center;
+                color: #ffffff;
+                padding: .5rem 1rem;
+                margin-top: 2rem;
+                background-color: blueviolet;
+                cursor: pointer;
+                &:hover{
+                    background-color: rgba(145, 43, 119, 0.322);
+                    transition: ease .4s;
+    
+                }
+                
+            }
+        }
+    }
+}
+}

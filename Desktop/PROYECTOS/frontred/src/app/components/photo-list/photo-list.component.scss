@@ -1,0 +1,28 @@
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5vh 5vw;
+    
+    .col{
+        border: 1px rgba(145, 43, 119, 0.322) solid;
+        margin: 2vh 0;
+        max-width: 25vw;
+        padding: 1rem;
+        text-align: center;
+        &:hover{
+            cursor: pointer;
+            box-shadow: 0 0 .2rem;
+        }
+        .card-header{
+            background-color: rgba(145, 43, 119, 0.322);
+            padding: 1vh 0;
+        }
+        .card-body{
+            padding: 1vh 0;
+        }
+    }
+}
+img{
+    max-width: 25vw;
+}

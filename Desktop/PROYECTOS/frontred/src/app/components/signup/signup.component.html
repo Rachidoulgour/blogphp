@@ -1,0 +1,10 @@
+<div>
+    <div class="signup-form">
+        <form (submit)="signUp()">
+            <input type="text" name="username" [(ngModel)]="user.username" placeholder="Usuario" required>
+            <input type="email" name="email" [(ngModel)]="user.email" placeholder="Email" required>
+            <input type="password" name="password" [(ngModel)]="user.password" placeholder="Contraseña" required>
+            <button type="submit">Registrarse</button>
+        </form>
+    </div>
+</div>

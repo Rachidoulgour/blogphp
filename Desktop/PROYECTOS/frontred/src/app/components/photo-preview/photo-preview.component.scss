@@ -1,0 +1,73 @@
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2vh 5vw;
+    .col{
+        // border: 1px rgba(145, 43, 119, 0.322) solid;
+        // margin: 2vh 0;
+        // max-width: 40vw;
+        // padding: 1rem;
+        // text-align: center;
+        // .card-header{
+        //     background-color: rgba(145, 43, 119, 0.322);
+        //     padding: 1vh 0;
+        // }
+        // .card-body{
+        //     padding: 1vh 0;
+        // }
+    }
+}
+img{
+    max-width: 35vw;
+}
+.col{
+    border: 1px rgba(145, 43, 119, 0.322) solid;
+    margin: .5vh 0;
+    padding: 1vh 2vw;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    //flex-wrap: wrap;
+    justify-content: center;
+    .card{  
+        .card-body{
+            .form-group{
+                margin-top: 1vh;
+                input{
+                    width: 20rem;
+                    padding: .5rem;
+                }
+                textarea{
+                    margin-bottom: 2vh;
+                    width: 30rem;
+                    padding: .5rem;
+                }
+            }
+            button{
+                all: unset;
+                color: white;
+                background-color: green;
+                padding: 1vh 3vw;
+                &:hover{
+                    background-color: rgb(71, 236, 134);
+                    transition: ease .3s;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+button{
+    all: unset;
+    color: white;
+    background-color: red;
+    padding: 1vh 3vw;
+    margin-left: 10vw;
+    margin-top: 2vh;
+    &:hover{
+        background-color: rgb(245, 146, 146);
+        transition: ease .3s;
+        cursor: pointer;
+    }
+}

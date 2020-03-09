@@ -1,0 +1,38 @@
+.login-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 60vw;
+        border: solid 1px blueviolet;
+        padding: .7rem;
+        
+        input{
+            all: unset;
+            border: solid 1px blueviolet;
+            margin-top: .5rem;
+            width: 30vw;
+            padding: .1rem;
+        }
+        button{
+            all: unset;
+            color: white;
+            text-align: center;
+            border: solid 1px blueviolet;
+            background-color: blueviolet;
+            margin-top: .5rem;
+            padding: .4rem .5rem;
+            width: 10vw;
+            &:hover {
+                background-color: rgba(145, 43, 119, 0.322);
+                color: blueviolet;
+                transition: ease .3s;
+            }
+        }
+    }
+}
