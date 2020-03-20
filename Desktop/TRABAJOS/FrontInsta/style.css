@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #fafafa;
+}
+main{
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+}
+
+.imagePart{
+    width: 50vw;
+    text-align: right;
+    margin-right: 5px;
+}
+.mainSection{
+    margin-left: 5px;
+}
+.general{
+    margin: 60px 0;
+    width: 25vw;
+}
+.login{
+    background-color: #ffffff;
+    border: solid 1px #dbdbdb;
+    
+}
+.loginInputs{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    
+}
+.loginInputs img{
+    width: 220px;
+    display: flex;
+    align-self: center;
+    margin: 20px 0;
+}
+.loginInputs input{
+    all: unset;
+    border: solid 1px #e7e7e7;
+    margin: 3px 10px;
+    padding: 7px;
+    background-color: #fafafa;
+    color: #999999;
+}
+.loginInputs button{
+    all: unset;
+    padding: 5px;
+    margin: 15px 10px;
+    background-color: #c3e0fa;
+    color: white;
+    text-align: center;
+    border: 1px solid #00000000;
+    border-radius: 4px;
+}
+.loginFacebook{
+    display: flex;
+    justify-content: center;
+}
+.loginFacebook p{
+    color: #385195;
+}
+.loginFacebook img{
+    width: 2vw;   
+}
+.password{
+    text-align: center;
+    margin: 15px;
+    
+}
+.password a{
+    text-decoration: none;
+    color: #003569;
+}
+
+.register{
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    border: solid 1px #dbdbdb;
+    margin: 15px 0;
+    padding: 15px;
+}
+.register a{
+    text-decoration: none;
+    color: #3e9af1;
+    font-weight: bold;
+}
+.register img{
+    width: 2vw;
+}
+.applications p{
+    text-align: center;
+    margin: 20px 0;
+}
+.app-logos{
+    display: flex;
+    justify-content: center;
+}
+.app-logos img{
+    width: 10vw;
+    margin: 10px;
+}
