@@ -1,0 +1,128 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ofertas</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="timeline">
+    <div class="covid-section">
+        <p>Protegete contra la pandemia siguiendo las medidas de prevención</p>
+    </div>
+    <!-- <div class="notificationes">
+        <button *ngIf="unseenPetitions && unseenPetitions.length>0" class="btn-message"
+            [routerLink]="['/permisos']">Tienes {{unseenPetitions.length}} permisos de contacto</button>
+        <button *ngIf="receivedpetitions && receivedpetitions.length>0" class="btn-message"
+            [routerLink]="['/permisos']">Tienes {{receivedpetitions.length}} peticiones de contacto</button>
+    </div> -->
+    <div class="city-filter">
+        <mat-accordion>
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                    <div class="searchBtn">
+                        <span class="material-icons">
+                            search
+                        </span>
+                        <p>Buscar y Filtrar</p>
+                    </div>
+                </mat-expansion-panel-header>
+                <div class="filter-area">
+                    <form [formGroup]="form" (submit)="search()" class="filter-form">
+                    <!-- <mat-form-field class="searchInput"> -->
+                        <mat-label>Buscar por títulos</mat-label>
+                        <input matInput type="text" formControlName="searchQuery" >
+                        <!-- <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Borrar"
+                            (click)="value=''">
+                            <mat-icon>close</mat-icon>
+                        </button> -->
+                    <!-- </mat-form-field>
+                    <mat-form-field  class="searchCity"> -->
+                        <mat-label>Ciudad</mat-label>
+                        <select formControlName="city">
+                            <!-- <option value=""></option> -->
+                            <option *ngFor="let city of cities" value="{{city.name}}"
+                                [selected]="selectedCity === city.name">
+                                {{ city.name }}</option>
+                        </select>
+
+                    <!-- </mat-form-field> -->
+                    <button mat-raised-button type="submit" class="parimary">Buscar</button>
+                    <button mat-raised-button (click)="clearSearch()">Borrar Filtros</button>
+                </form>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+    <div *ngIf="!offerBooks" class="spinner">
+        <!-- <img [src]="'assets/spinner.jpg'" *ngIf="!offerBooks"> -->
+        <mat-spinner class="mat-spinner"></mat-spinner>
+    </div>
+    <div *ngIf="offerBooks" class="publication-section">
+        <div *ngFor="let offerBook of offerBooks" class="publication">
+            <div class="publisher-section">
+
+
+                <div class="publisher">
+                    <h4>
+                        <a [routerLink]="['/usuario', offerBook.user['_id']]">
+                            {{offerBook.user['username'].toUpperCase()}}
+                        </a>
+                    </h4>
+
+                </div>
+                <div *ngIf="identity!=null && offerBook.user['_id']!=identity._id" class="messageSend">
+                    <a [routerLink]="['/publication', offerBook['_id']]">
+                        <p>Contactar</p>
+                    </a>
+                </div>
+                <div *ngIf="identity!=null && offerBook.user['_id']==identity._id || offerBook.user['tanbatt']=='ANBBAT_AMKRAN'"
+                    class="delete-btn">
+                    <!-- <button (click)="deletePublication(offerBook._id)">
+                        <mat-icon>delete_forever</mat-icon><span>Eliminar</span>
+                    </button> -->
+                </div>
+            </div>
+
+            <div class="myPub">
+                <a [routerLink]="['/publication', offerBook['_id']]">
+
+                    <div class="image" *ngIf="offerBook.file!='null'">
+                        <img [src]="offerBook.file">
+                    </div>
+                    <div class="image" *ngIf="offerBook.file==='null'">
+                        <img [src]="'assets/no-image.png'">
+                    </div>
+
+
+                    <div class="text">
+                        <p class="title">{{offerBook.title}}</p>
+                        <p>{{offerBook.genre}}</p>
+                        <p>{{offerBook.city}}</p>
+                        <!-- <p>{{offerBook.price}} €</p> -->
+                        <div class="created">
+                            <p>
+                                
+                                <!-- {{(offerBook.created_at | amFromUnix) | amLocale:'es' | amTimeAgo}} -->
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <button class="seemore" (click)="viewMore()" *ngIf="noMore==true">
+        Ver más
+    </button>
+    <div class="error500" *ngIf="error500">
+        <p>Algo ha ido mal</p>
+    </div>
+</div>
+
+</ion-content>

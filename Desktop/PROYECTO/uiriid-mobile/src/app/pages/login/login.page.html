@@ -1,0 +1,64 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content> -->
+<ion-content >
+  <div class="login">
+    <div class="login-form">
+        <form (submit)="logIn()">
+            <p>Entra y conectate con otras mentes</p>
+            <div class="inputs">
+                <ion-input type="email" name="email" [(ngModel)]="user.email" placeholder="Email" required></ion-input>
+                <ion-input type="password" name="password" [(ngModel)]="user.password" placeholder="Contraseña" required minlength="6"></ion-input>
+                    
+            </div>
+            <ion-button type="submit">Entrar</ion-button>
+            <a [routerLink]="['/recuperar-password']">¿Olviaste la contraseña?</a>
+        </form>
+        <!-- <div class="error" *ngIf="error404">
+            <p>Contraseña o email erroneo</p>
+        </div>
+        <div class="error" *ngIf="error501">
+            <p>No estás registrado</p>
+        </div> -->
+
+    </div>
+</div>
+  <!-- <div ion-fixed padding class="appForm" margin-bottom style="position: absolute !important;top:0%;bottom: 0%;left:0;margin-bottom: 1% !important; height: auto !important">
+    <div class="logo">
+      <img src="http://placehold.it/50x50">
+    </div>
+    <ion-list style="margin-top: 43% !important;">
+      <ion-item style="position: relative !important;">
+        <ion-icon name="ios-mail-outline" item-left></ion-icon>
+        <ion-input class="inpt-field" style=" font-size: 18px !important" type="email" placeholder="Email" clearInput></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="ios-lock-outline" item-left></ion-icon>
+        <ion-input type="password" placeholder="Password" clearInput></ion-input>
+      </ion-item>
+
+      <button ion-button block class="login-button" margin-vertical>Sign In</button>
+
+      <p class="signup">
+        <button ion-button [routerLink]="['/register']" clear color="color3">
+          Sign Up
+        </button>
+      </p>
+    </ion-list> -->
+
+    <!-- <ion-text color="danger" *ngIf="error404">
+      <p> Contraseña o email erroneo</p>
+    </ion-text>
+    <ion-text color="danger" *ngIf="error501">
+      <p> No estás registrado</p>
+    </ion-text> -->
+
+  <!-- </div> -->
+</ion-content>
+

@@ -1,0 +1,107 @@
+.login {
+  height: 78vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90vw;
+      p {
+        font-size: 1rem;
+      }
+      .inputs {
+        width: 100%
+      }
+      ion-button {
+        width: 90vw;
+      }
+      //width: 31vw;
+      // border: solid 1px rgb(44, 184, 165);
+      // border-radius: 0.1rem;
+      // background-color: rgb(230, 236, 236);
+      // box-shadow: 0 5px 5px rgb(157, 163, 162);
+      // padding: 0.7rem;
+
+      // p {
+      //   margin: 0;
+      //   color: rgb(44, 184, 165);
+      // }
+      // .inputs input {
+      //   all: unset;
+      //   border: solid 1px rgb(44, 184, 165);
+      //   background-color: rgb(242, 247, 247);
+      //   border-radius: 0.1rem;
+      //   margin-top: 0.5rem;
+      //   width: 30vw;
+      //   padding: 0.1rem;
+      // }
+      // .checkbox {
+      //   border: 0.01rem solid black;
+      //   padding: 0;
+      // }
+      // button {
+      //   all: unset;
+      //   color: white;
+      //   text-align: center;
+      //   border: solid 1px rgb(44, 184, 165);
+      //   background-color: rgb(44, 184, 165);
+      //   border-radius: 0.1rem;
+      //   margin-top: 0.5rem;
+      //   padding: 0.4rem 0.5rem;
+      //   min-width: 10vw;
+      //   &:hover {
+      //     background-color: rgb(242, 247, 247);
+      //     color: rgb(44, 184, 165);
+      //     cursor: pointer;
+      //     transition: ease 0.3s;
+      //   }
+      // }
+      // a {
+      //   text-decoration: none;
+      //   margin-top: 0.3rem;
+      //   color: rgb(44, 184, 165);
+      // }
+    }
+    .error {
+      p {
+        color: red;
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+// @media screen and (max-width: 50rem) {
+//   .login {
+//     .login-form {
+//       display: flex;
+//       justify-content: center;
+
+//       form {
+//         display: flex;
+//         width: 80vw;
+//         .inputs {
+//           display: flex;
+//           flex-direction: column;
+//           input {
+//             width: 70vw;
+//           }
+//         }
+//         button {
+//           width: 70vw;
+//           padding: .1rem;
+//         }
+//       }
+//     }
+//   }
+// }

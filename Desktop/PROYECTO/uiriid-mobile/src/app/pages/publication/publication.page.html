@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>publication</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="publiction-page" *ngIf="publications">
+    <div class="publisher-section">
+
+        <p [routerLink]="['/usuario', publications['user']['_id']]">{{publications['user'].username.toUpperCase()}}</p>
+        <div *ngIf="identity && publications['user']['_id']!=identity._id">
+            <div *ngIf="isPermited && isPermited.length==0" class="messageSend">
+                <button (click)="sendPetition(publications['_id'], publications['user']['_id'])">
+                    Contactar
+                </button>
+            </div>
+            <!-- <div *ngIf="isPermited && isPermited.length>0" class="messageSend">
+                <button *ngIf="isPermited[0].status=='pendent'" disabled class="pendent-petition">
+                    Pendiente
+                </button>
+                <button *ngIf="isPermited[0].status=='accepted'" (click)="openDialog()">
+                    Ver Contacto
+                </button>
+
+            </div> -->
+        </div>
+
+    </div>
+    <div class="publication-section">
+        <div class="setting">
+            <p *ngIf="identity && publications['user']['_id']==identity._id" class="edit"><button class="edit-btn"
+                    [routerLink]="['/editar-publicacion/', publications['_id']]">Editar Publicación</button></p>
+            <p *ngIf="identity && publications['user']['_id']!=identity._id" class="edit"><button class="disabled-btn"
+                    *ngIf="isFavorit && isFavorit.length>0" disabled>Favorito</button>
+                <button class="edit-btn" (click)="addToFavorits()" *ngIf="isFavorit && isFavorit.length==0">Añadir a
+                    Favoritos</button>
+            </p>
+            <p *ngIf="identity && publications['user']['_id']!=identity._id" class="edit"><button class="edit-btn"
+                    [routerLink]="['/denunciar', publications['_id']]">Denunciar la publicación</button></p>
+            <p *ngIf="identity && publications['user']['_id']==identity._id || identity && identity.tanbatt === 'ANBBAT_AMKRAN'" class="edit"><button
+                    class="edit-btn" (click)="deletePublication(publications['_id'])">Eliminar la publicación</button>
+            </p>
+        </div>
+        <h2>{{publications['title'].toUpperCase()}}</h2>
+        <div class="image" *ngIf="publications['file']!='null'">
+            <img [src]="publications['file']">
+        </div>
+        <div class="text">
+            <p>Genero: {{publications['genre']}}</p>
+            <p>Ciudad: {{publications['city']}}</p>
+            <p *ngIf="publications['price']">Precio: {{publications['price']}}€</p>
+            <p>{{publications['text']}}</p>
+        </div>
+
+
+    </div>
+</div>
+<div class="no-messages" *ngIf="publications && publications.length==0">
+    <p>No se encuentra la publicación</p>
+</div>
+
+<div class="error500" *ngIf="error500">
+    <p>Algo ha ido mal</p>
+</div>
+</ion-content>

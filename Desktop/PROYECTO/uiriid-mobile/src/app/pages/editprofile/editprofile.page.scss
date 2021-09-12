@@ -1,0 +1,66 @@
+.edit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .signup-form {
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        input {
+          width: 30vw;
+          margin-bottom: 0.3rem;
+        }
+        button {
+          all: unset;
+          color: white;
+          text-align: center;
+          border: solid 1px rgb(44, 184, 165);
+          background-color: rgb(44, 184, 165);
+          margin-top: 0.5rem;
+          padding: 0.4rem 0.5rem;
+          width: 6vw;
+          &:hover {
+            cursor: pointer;
+            background-color: rgb(242, 247, 247);
+            color: rgb(44, 184, 165);
+            transition: ease 0.3s;
+          }
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 50rem) {
+    .edit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .signup-form {
+        form {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          input {
+            width: 80vw;
+            margin-bottom: 0.3rem;
+          }
+          .image {
+            img {
+              width: 80vw;
+            }
+          }
+          button {
+            min-width: 15vw;
+            &:hover {
+              cursor: pointer;
+              background-color: rgb(44, 184, 165);
+              color: rgb(44, 184, 165);
+              transition: ease 0.3s;
+            }
+          }
+        }
+      }
+    }
+  }
+  

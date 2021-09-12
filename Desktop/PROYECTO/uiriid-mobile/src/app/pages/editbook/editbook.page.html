@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>editbook</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="publicate">
+    <h4>Intercambia tus libros y conectate con otros corazones</h4>
+    <div class="card-body">
+        <form #newPubForm="ngForm" (ngSubmit)="onSubmit($event)">
+            <label for="purpose">Intercambio o Donación?</label>
+            <select name="purpose" #purpose="ngModel" [(ngModel)]="publication.purpose" required>
+                <option *ngFor="let purpose of purposes" value="{{purpose.name}}">
+                    {{purpose.name}}
+                </option>
+            </select>
+            <input type="text" name="title" #title="ngModel" [(ngModel)]="publication.title" placeholder="¡Titulo!">
+            <textarea name="text" #text="ngModel" [(ngModel)]="publication.text" placeholder="¡Descripción!"></textarea>
+            <input type="file" name="file" placeholder="sube la imagen" (change)="fileChangeEvent($event)">
+            <label for="genre">Genero:</label>
+            <select name="genre" #genre="ngModel" [(ngModel)]="publication.genre" required>
+                <option *ngFor="let genre of genres" value="{{genre.name}}">
+                    {{genre.name}}
+                </option>
+            </select>
+            <label for="ciudad">Ciudad:</label>
+            <select name="ciudad" #ciudad="ngModel" [(ngModel)]="publication.city" required>
+                <option *ngFor="let city of cities" value="{{city.name}}">
+                    {{city.name}}
+                </option>
+            </select>
+            <label for="language">Idioma:</label>
+            <select name="language" #language='ngModel' [(ngModel)]="publication.language" required>
+                <option *ngFor="let language of languages" value="{{language.name}}">
+                    {{language.name}}
+                </option>
+            </select>
+            <button type="submit">Editar</button>
+        </form>
+    </div>
+</div>
+
+</ion-content>

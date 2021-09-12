@@ -1,0 +1,122 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="homepage">
+    <div class="books-section">
+        <div class="see-more">
+            <p class="section-title">Intercambio</p>
+            <p [routerLink]="['/exchangebook']">Ver más</p>
+        </div>
+        <div class="books">
+            <div class="books-list" *ngFor="let exchangeBook of exchangeBooks">
+                <div class="book" [routerLink]="['/publication', exchangeBook['_id']]">
+                    <div class="image">
+                        <img [src]="exchangeBook.file">
+                    </div>
+                    <div class="text">
+                        <p class="title">{{exchangeBook.title}}</p>
+                        <p>{{exchangeBook.genre}}</p>
+                        <p>{{exchangeBook.city}}</p>
+                        <div class="created">
+                            <p>
+                                <!-- <mat-icon>hourglass_empty</mat-icon> -->
+                                <!-- {{(exchangeBook.created_at | amFromUnix) | amLocale:'es' | amTimeAgo}} -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="books-section">
+        <div class="see-more">
+            <p class="section-title">Oferta</p>
+            <p [routerLink]="['/sellbook']">Ver más</p>
+        </div>
+        <div class="books">
+            <div class="books-list" *ngFor="let sellBook of sellBooks">
+                <div class="book" [routerLink]="['/publication', sellBook['_id']]">
+                    <div class="image">
+                        <img [src]="sellBook.file">
+                    </div>
+                    <div class="text">
+                        <p class="title">{{sellBook.title}}</p>
+                        <p>{{sellBook.genre}}</p>
+                        <p>{{sellBook.city}}</p>
+                        <p>{{sellBook['price']}} €</p>
+                        <div class="created">
+                            <p>
+                                <!-- <mat-icon>hourglass_empty</mat-icon> -->
+                                <!-- {{(sellBook.created_at | amFromUnix) | amLocale:'es' | amTimeAgo}} -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="books-section">
+        <div class="see-more">
+            <p class="section-title">Donación</p>
+            <p [routerLink]="['/donationbook']">Ver más</p>
+        </div>
+        <div class="books">
+            <div class="books-list" *ngFor="let donationBook of donationBooks">
+                <div class="book" [routerLink]="['/publication', donationBook['_id']]">
+                    <div class="image">
+                        <img [src]="donationBook.file">
+                    </div>
+                    <div class="text">
+                        <p class="title">{{donationBook.title.toUpperCase()}}</p>
+                        <p>{{donationBook.genre}}</p>
+                        <p>{{donationBook.city}}</p>
+                        <div class="created">
+                            <p>
+                                <!-- <mat-icon>hourglass_empty</mat-icon> -->
+                                <!-- {{(donationBook.created_at | amFromUnix) | amLocale:'es' | amTimeAgo}} -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="books-section">
+        <div class="see-more">
+            <p class="section-title">Demanda</p>
+            <p [routerLink]="['/demandbook']">Ver más</p>
+        </div>
+        <div class="books">
+            <div class="books-list" *ngFor="let demandBook of demandBooks">
+                <div class="book" [routerLink]="['/publication', demandBook['_id']]">
+                    <div class="image">
+                        <img [src]="demandBook.file">
+                    </div>
+                    <div class="text">
+                        <p class="title">{{demandBook.title}}</p>
+                        <p>{{demandBook.genre}}</p>
+                        <p>{{demandBook.city}}</p>
+                        <div class="created">
+                            <p>
+                                <!-- <mat-icon>hourglass_empty</mat-icon> -->
+                                <!-- {{(demandBook.created_at | amFromUnix) | amLocale:'es' | amTimeAgo}} -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</ion-content>

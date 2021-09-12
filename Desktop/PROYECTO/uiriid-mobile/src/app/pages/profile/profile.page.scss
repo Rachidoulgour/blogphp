@@ -1,0 +1,197 @@
+.profil {
+    margin-bottom: 1rem;
+    height: 80%;
+  
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 1rem 7rem;
+  
+      button {
+        all: unset;
+        background-color: rgba(79, 192, 177, 0.849);
+        border-radius: 0.3rem;
+        color: white;
+        padding: 0.5rem 0.5rem;
+      }
+      :hover {
+        background-color: rgba(7, 122, 107, 0.966);
+        color: white;
+        cursor: pointer;
+        border-radius: 0.3rem;
+        transition: ease 0.3s;
+      }
+    }
+  
+    .user-data {
+      display: flex;
+      border: 0.05rem solid rgb(44, 184, 165);
+      border-radius: 0.3rem;
+      margin: 0 10rem;
+      .datauser {
+        p {
+          color: rgb(4, 4, 77);
+          margin-left: 1rem;
+          margin-top: 1rem;
+        }
+        .username {
+          font-size: 1.5rem;
+        }
+        .user-email {
+          margin-top: 0;
+        }
+      }
+  
+      .profile-avatar {
+        img {
+          max-width: 4rem;
+          margin-left: 0.5rem;
+          padding-top: 1.5rem;
+        }
+      }
+    }
+    h3 {
+      margin-left: 8rem;
+      margin-top: 0.5rem;
+      color: rgb(4, 4, 77);
+    }
+  
+    .publication {
+      border: 0.05rem solid rgb(44, 184, 165);
+      border-radius: 0.3rem;
+      padding: 0rem 0.5rem;
+      margin: 1rem 15rem 3rem 15rem;
+  
+      .delete-btn {
+        margin-top: 0.5rem;
+        button {
+          display: flex;
+          all: unset;
+          color: #ffffff;
+          background-color: #a03535;
+          border: solid 0.01rem #a03535;
+          border-radius: 0.3rem;
+          margin-right: 0.3rem;
+          padding: 0.3rem 0.8rem;
+          .material-icons {
+            padding: 0;
+            display: none;
+          }
+  
+          &:hover {
+            cursor: pointer;
+            background-color: #ee5a5a;
+          }
+        }
+      }
+  
+      .publisher {
+        color: rgb(4, 4, 77);
+        h4 {
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+      .image {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0.8rem;
+        margin-top: 0.8rem;
+        img {
+          max-width: 20rem;
+          text-align: center;
+          border-radius: 0.3rem;
+        }
+      }
+      .text {
+        border-radius: 0.3rem;
+        margin-bottom: 0.5rem;
+        padding: 0rem 0.5rem;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 50rem) {
+    .profil {
+      margin-bottom: 5rem;
+      .buttons {
+        margin: 5vw 5vw;
+      }
+  
+      .user-data {
+        margin: 0 5vw;
+        .datauser {
+          p {
+            margin-left: 1rem;
+          }
+          .username {
+            font-size: 1rem;
+          }
+          .user-email {
+            font-size: 0.8rem;
+          }
+        }
+  
+        .profile-avatar {
+          img {
+            max-width: 4rem;
+            margin-left: 0.5rem;
+            padding-top: 1.5rem;
+          }
+        }
+      }
+      h3 {
+        margin-left: 8vw;
+      }
+      .publication {
+        padding: 0rem 0.5rem;
+        margin: 3vh 5vw;
+        .delete-btn {
+          margin-top: 0.5rem;
+          margin-bottom: 0.5rem;
+          button {
+            all: unset;
+            color: #ffffff;
+            background-color: #a03535;
+            border: solid 0.01rem #a03535;
+            border-radius: 0.1rem;
+            margin-right: 0.3rem;
+            padding: 0.3rem 0.8rem;
+            &:hover {
+              cursor: pointer;
+              background-color: #ee5a5a;
+            }
+            .material-icons {
+              padding: 0;
+              display: block;
+            }
+            span {
+              display: none;
+            }
+          }
+        }
+        .publisher {
+          color: rgb(4, 4, 77);
+          h4 {
+            a {
+              text-decoration: none;
+            }
+          }
+        }
+        img {
+          width: 25vw;
+          margin-bottom: 0.2rem;
+        }
+        .description {
+          margin: 0;
+        }
+        .text {
+          margin-bottom: 0.5rem;
+          padding: 0.5rem 0.5rem;
+        }
+      }
+    }
+  }
+  

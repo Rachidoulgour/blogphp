@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>editprofile</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="edit">
+    <h3>Editar Perfil</h3>
+    <div class="signup-form" *ngIf= "user">
+        <form (submit)="userEdit()" >
+            <input type="text" name="username" [(ngModel)]="user.username" placeholder="Usuario" required>
+            <input type="email" name="email" [(ngModel)]="user.email" placeholder="Email" required>
+            <input type="password" name="password" [(ngModel)]="user.password" placeholder="Contraseña" required>
+            <div class="image">
+                <img [src]="'http://localhost:3000/'+user.avatar">
+            </div>
+            <input type="file" (change)="fileChangeEvent($event)" placeholder="subir imagen">
+            <button type="submit">Editar</button>
+        </form>
+    </div>
+</div>
+</ion-content>

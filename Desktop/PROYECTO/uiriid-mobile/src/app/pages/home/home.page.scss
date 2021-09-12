@@ -1,0 +1,144 @@
+.homepage {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  
+    .books-section {
+        width: 80vw;
+        border-bottom: 0.05rem solid rgb(44, 184, 165);
+          //border-radius: 0.5rem;
+          padding: .5rem;
+          margin-top: 2rem;
+      .see-more {
+          display: flex;
+          justify-content: space-between;
+          cursor: pointer;
+        
+        .section-title {
+                font-weight: bold;
+            }
+        p {
+            margin: 0 0 .5rem 0;
+            
+        }
+      }
+      .books {
+        display: flex;
+        .books-list {
+          display: flex;
+          margin: 0 .6rem;
+          flex-direction: column;
+          .book {
+            display: flex;
+            //flex-direction: column;
+            .image {
+                margin-right: .3rem;
+                max-width: 8;
+              img {
+                max-width: 8rem;
+                max-height: 11rem;
+                text-align: center;
+                border-radius: 0.3rem;
+              }
+            }
+            .text {
+              
+              padding: 0rem 0.5rem;
+              font-size: 0.7rem;
+              .title {
+                width: 10vw;
+               
+                font-weight: bold;
+                
+              }
+                p {
+                  color: rgb(17, 85, 131);
+                  text-align: left;
+                  margin: 0 ;
+                }
+                .created {
+                  font-size: 0.7rem;
+                  p {
+                    margin: 0;
+                    mat-icon {
+                      padding: 0;
+                      font-size: 0.7rem;
+                      margin: 0;
+                    }
+                  }
+                }
+              
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 50rem) {
+    .homepage {
+     
+    
+      .books-section {
+          width: 90vw;
+          
+        .books {
+          
+          .books-list {
+            width: 90vw;
+            display: flex;
+            margin: 0 .2rem;
+            flex-direction: column;
+            justify-content:end;
+            
+            .book {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              
+              .image {
+                  margin-right: .2rem;
+                  max-width: 28vw;
+                img {
+                  max-width: 28vw;
+                  max-height: 28vh;
+                  text-align: center;
+                  border-radius: 0.3rem;
+                }
+              }
+              .text {
+                
+                padding: 0rem 0.2rem;
+                font-size: 0.7rem;
+                .title {
+                  width: 22vw;
+                  
+                  font-weight: bold;
+                  display: block;
+                  
+                }
+                  p {
+                    color: rgb(17, 85, 131);
+                    text-align: left;
+                    margin: 0 ;
+                    display: none;
+                  }
+                  .created {
+                    font-size: 0.7rem;
+                    p {
+                      margin: 0;
+                      mat-icon {
+                        padding: 0;
+                        font-size: 0.7rem;
+                        margin: 0;
+                      }
+                    }
+                  }
+                
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  

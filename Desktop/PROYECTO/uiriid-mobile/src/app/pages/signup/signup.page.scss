@@ -1,0 +1,109 @@
+.signup-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 78vh;
+    width: 100vw;
+    
+  
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90vw;
+      
+      ion-icon {
+        width: 90vw;
+      }
+    //   border: solid 1px rgb(44, 184, 165);
+    //   border-radius: 0.3rem;
+    //   background-color: rgb(230, 236, 236);
+    //   box-shadow: 0 5px 5px rgb(157, 163, 162);
+    //   padding: 0.7rem;
+      //margin-top: 10rem;
+      ion-item {
+        display: flex !important;
+        flex-direction: column !important;
+        
+        //align-items: center;
+        .item-native {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center;
+            .item-inner {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center;
+            }
+        }
+        // .terms {
+        //     display: flex;
+        //     flex-direction: column;
+        //     //align-items: center;
+        // }
+        // .inputs input {
+        //     all: unset;
+        //     border: solid 1px rgb(44, 184, 165);
+        //     background-color: rgb(242, 247, 247);
+        //     border-radius: 0.3rem;
+        //     margin-top: 0.5rem;
+        //     width: 30vw;
+        //     padding: 0.1rem;
+        //   }
+        //   .inputs {
+        //     .error {
+        //       color: red;
+        //     }
+        //   }
+        //   .checkbox {
+        //     border: 0.01rem solid black;
+        //     padding: 0;
+        //   }
+        //   button {
+        //     all: unset;
+        //     color: white;
+        //     text-align: center;
+        //     border: solid 1px rgb(44, 184, 165);
+        //     background-color: rgb(44, 184, 165);
+        //     border-radius: 0.3rem;
+        //     margin-top: 0.5rem;
+        //     padding: 0.4rem 0.5rem;
+        //     min-width: 10vw;
+        //     &:hover {
+        //       background-color: rgb(242, 247, 247);
+        //       color: rgb(44, 184, 165);
+        //       cursor: pointer;
+        //     }
+        //   }
+      }
+      
+    }
+    .terms {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+  }
+//   @media screen and (max-width: 50rem) {
+//     .signup-form {
+//       display: flex;
+//       justify-content: center;
+  
+//       form {
+//         display: flex;
+//         width: 80vw;
+//         margin: 5rem 0;
+//         h2 {
+//           margin: 0.5rem 0;
+//         }
+//         .inputs {
+//           display: flex;
+//           flex-direction: column;
+//           input {
+//             width: 70vw;
+//           }
+//         }
+//       }
+//     }
+  //}
+  

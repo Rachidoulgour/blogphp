@@ -1,0 +1,106 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registrarse</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class= 'signup-form'>
+    <!-- <div class="logo">
+      <img src="http://placehold.it/50x50">
+    </div> -->
+    <form [formGroup]="form" class="register" (submit)="signUp()">
+      <div >
+        <ion-icon name="ios-mail-outline" item-left></ion-icon>
+        <ion-input  type="text" formControlName="username"
+          placeholder="Usuario" clearInput>
+        </ion-input>
+        <ion-text color="danger" *ngIf="form.get('username').invalid">
+          <p> El nombre tiene que tener entre 8 y 40 caracteres</p>
+        </ion-text>
+      </div>
+      <div>
+        <ion-icon name="ios-mail-outline" item-left></ion-icon>
+        <ion-input type="email" formControlName="email"
+          placeholder="Email" clearInput>
+        </ion-input>
+        <ion-text color="danger" *ngIf="form.get('email').invalid &&  form.get('email').touched">
+          <p> Debes introducir un email</p>
+        </ion-text>
+      </div>
+      <div>
+        <ion-icon></ion-icon>
+        <ion-input type="password" formControlName="password" placeholder="Contraseña" clearInput></ion-input>
+        <ion-text color="danger" *ngIf="form.get('password').invalid &&  form.get('password').touched">
+          <p> La contraseña debe contener al menos un numero, una letra y al menos 8 carácteres</p>
+        </ion-text>
+      </div>
+      <div>
+        <ion-input type="password" formControlName="confirmPassword" matInput [errorStateMatcher]="matcher"
+          placeholder="Repetir Contraseña"></ion-input>
+        <mat-error *ngIf="form.hasError('notSame')">
+          Las contraseñas no coinciden
+        </mat-error>
+      </div>
+      <div class="terms">
+        <div>
+          <input class="checkbox" type="checkbox" formControlName="conditions" value="accept" required>
+          <label for="conditions">Acepto las <a [routerLink]="['/terms']">condiciones de uso</a> y
+          <a [routerLink]="['/politics']">la política de privacidad</a> </label>
+        </div>       
+        <div class="error" *ngIf="form.get('conditions').invalid">
+          Debe aceptar los terminos y condiciones de uso.
+        </div>
+      </div>
+
+      <ion-button >Registrate</ion-button>
+      <!-- <ion-item >
+        <ion-icon name="ios-mail-outline" item-left></ion-icon>
+        <ion-input  type="text" formControlName="username"
+          placeholder="Usuario" clearInput>
+        </ion-input>
+        <ion-text color="danger" *ngIf="form.get('username').invalid">
+          <p> El nombre tiene que tener entre 8 y 40 caracteres</p>
+        </ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="ios-mail-outline" item-left></ion-icon>
+        <ion-input type="email" formControlName="email"
+          placeholder="Email" clearInput>
+        </ion-input>
+        <ion-text color="danger" *ngIf="form.get('email').invalid &&  form.get('email').touched">
+          <p> Debes introducir un email</p>
+        </ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-icon></ion-icon>
+        <ion-input type="password" formControlName="password" placeholder="Contraseña" clearInput></ion-input>
+        <ion-text color="danger" *ngIf="form.get('password').invalid &&  form.get('password').touched">
+          <p> La contraseña debe contener al menos un numero, una letra y ser mayor que 8 carácteres</p>
+        </ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" formControlName="confirmPassword" matInput [errorStateMatcher]="matcher"
+          placeholder="Repetir Contraseña"></ion-input>
+        <mat-error *ngIf="form.hasError('notSame')">
+          Las contraseñas no coinciden
+        </mat-error>
+      </ion-item>
+      <ion-item class="terms">
+        <div>
+          <input class="checkbox" type="checkbox" formControlName="conditions" value="accept" required>
+          <label for="conditions">Acepto las <a [routerLink]="['/usuario']">condiciones de uso</a> y
+          <a [routerLink]="['/usuario']">la política de privacidad</a> </label>
+        </div>       
+        <div class="error" *ngIf="form.get('conditions').invalid">
+          Debe aceptar los terminos y condiciones de uso.
+        </div>
+      </ion-item>
+
+      <ion-button >Registrate</ion-button> -->
+    </form>
+
+  </div>
+</ion-content>
+
+<!-- class="inpt-field" style=" font-size: 18px !important" -->

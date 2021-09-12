@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>profile</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="profil">
+
+    <div class="buttons">
+        <p><button *ngIf="user && user.tanbatt=='ANBBAT_AMKRAN'" [routerLink]="['/admin-panel']">Panel de
+                Administración</button></p>
+        <p><button [routerLink]="['/favorit']">Favoritos</button></p>
+        <button *ngIf="unreed>0" class="btn-message" [routerLink]="['/mensajes/recibidos']"><span
+                class="tienes">Tienes</span> {{unreed}} <span class="tienes">mensajes</span></button>
+        <p><button [routerLink]="['/editprofile']">Editar Perfil</button></p>
+        <!-- <p><button (click)="deleteUserAccount()">Eliminar cuenta</button></p> -->
+    </div>
+
+    <h3>Mis Datos</h3>
+    <div *ngIf="user" class="user-data">
+        <!-- <div class="profile-avatar">
+            <img [src]="URL+'/'+user.avatar" *ngIf="user.avatar">
+            <img [src]="'assets/no-image.png'" *ngIf="!user.avatar">
+        </div> -->
+        <div class="datauser">
+            <p><span class="username">{{user.username}}</span></p>
+            <p class="user-email">{{user.email}}</p>
+        </div>
+    </div>
+    <div *ngIf="publications">
+        <h3>Mis Publicaciones</h3>
+        <div *ngFor="let publication of publications" class="publication">
+
+            <!-- <div *ngIf="publication.user['_id']==identity._id" class="delete-btn">
+                <button (click)="deletePublication(publication._id)">
+                    <mat-icon>delete_forever</mat-icon><span>Eliminar</span>
+                </button>
+            </div> -->
+            <div class="image" *ngIf="publication.file!='null'">
+                <img [src]="publication.file">
+            </div>
+            <!-- <p class="description">Descripción:</p> -->
+            <div class="text">
+                <p>{{publication.text}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+</ion-content>
